@@ -1,0 +1,334 @@
+/*! Sainsburys UI wireframe | Robert Akehurst */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+::-moz-selection {
+  background: #808080;
+  text-shadow: none; }
+
+::selection {
+  background: #808080;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #808080;
+  margin: 1em 0;
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+/* =========================================================================
+   Initial Styles
+   ========================================================================== */
+body {
+  font: 22px/32px Helvetica, Helvetica Neue, Arial, sans-serif; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%; }
+
+/* ===============
+    Typography
+   =============== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: normal; }
+
+h1 {
+  font-style: italic; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* ===============
+    Layout
+   =============== */
+.main-container article {
+  display: table; }
+  .main-container article header:not(:nth-of-type(2)),
+  .main-container article section:not(:nth-of-type(2)) {
+    display: table-header-group; }
+  .main-container article header:nth-of-type(2),
+  .main-container article section:nth-of-type(2) {
+    display: table-footer-group; }
+    .main-container article header:nth-of-type(2) ul,
+    .main-container article section:nth-of-type(2) ul {
+      list-style-position: inside;
+      padding-left: 0; }
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5em; }
+  nav ul a:hover {
+    text-decoration: underline; }
+
+ul.social-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0; }
+  ul.social-links li {
+    float: left;
+    width: 0;
+    margin: 0 16.66%; }
+    ul.social-links li a {
+      margin-left: -17.5px; }
+
+/* ==============
+    MOBILE: Main
+   ============== */
+.main article h1 {
+  font-size: 2em; }
+.main aside {
+  margin-top: 26px; }
+
+.footer-container {
+  width: 90%;
+  background-color: #f5f5f5;
+  border: 1px solid #808080;
+  margin: 0 5%; }
+  .footer-container footer {
+    padding: 20px 0; }
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+/* ===============
+    Header
+   =============== */
+.logo {
+  float: left;
+  margin-right: 20px;
+  margin: .67em .67em .67em 0; }
+
+.title {
+  float: left; }
+
+/* ===============
+    Toggle menu
+   =============== */
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+label {
+  -webkit-appearance: push-button;
+  -moz-appearance: button;
+  display: inline-block;
+  cursor: pointer;
+  clear: both;
+  float: left;
+  padding: 0.4em 1em;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%); }
+
+/* Default State */
+nav {
+  display: none;
+  width: 100%;
+  clear: both;
+  background-color: #f5f5f5;
+  border: 1px solid #808080; }
+
+/* Toggled State */
+input[type=checkbox]:checked ~ nav {
+  display: block;
+  clear: both; }
+
+/* ===============
+    Images
+   =============== */
+.full-img {
+  width: 100%; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+.visible-large {
+  display: none; }
+
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.bold {
+  font-weight: bold; }
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+  /* ====================
+      Menu
+     ==================== */
+  .header-container label {
+    display: none; }
+
+  nav {
+    display: block;
+    margin-bottom: 1em; }
+    nav a {
+      float: left;
+      margin: 0 3%; }
+    nav ul {
+      display: flex; }
+      nav ul li {
+        display: inline;
+        margin: 0 3%; }
+
+  .title {
+    float: left; }
+
+  /* ============
+      Main
+     ============ */
+  .main article {
+    float: left;
+    width: 70%; }
+  .main aside {
+    float: right;
+    width: 28%; }
+    .main aside h3 {
+      max-width: 200px; }
+
+  .main-container article header,
+  .main-container article section:nth-of-type(2),
+  .main-container article section:not(:nth-of-type(2)) {
+    display: block; }
+  .main-container article section:nth-of-type(2) {
+    float: right;
+    padding-left: 1em; }
+
+  /* ============
+      Footer
+     ============ */
+  .footer-container ul {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin: 1em -1em 0 0;
+    width: 20%; }
+
+  /* ====================
+      Visibility
+     ==================== */
+  .visible-large {
+    display: block; } }
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */
